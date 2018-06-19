@@ -17,10 +17,10 @@ Canvas2D.prototype.drawImage = function(image, position){
 //Object using constructor
 let Canvas = new Canvas2D();
 
-//For testing
-let image = new Image();
-image.src = "./assets/imgs/spr_background5.png"; //location of the image
+// //For testing
+// let image = new Image();
+// image.src = "./assets/imgs/spr_background5.png"; //location of the image
 
-setTimeout(() => { //needed because image doesn't load immediately
-    Canvas.drawImage(image, {x:0, y:0});
-}, 1000);
+// setTimeout(() => { //needed because image doesn't load immediately
+//     Canvas.drawImage(image, {x:0, y:0});
+// }, 1000);
