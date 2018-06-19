@@ -29,6 +29,7 @@ function loadAssets(callback){
     
     sprites.background = loadSprite('spr_background4.png'); //loads the pool table
     sprites.stick = loadSprite('spr_stick.png') //loads the sprite
+    sprites.whiteBall = loadSprite('spr_ball2.png') //loads the ball
 
     assetsLoadingLoop(callback);
 }
