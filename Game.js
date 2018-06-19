@@ -18,6 +18,7 @@ Game.prototype.mainLoop = function(){ //Controls the game
     Canvas.clear();
     PoolGame.gameWorld.update(); 
     PoolGame.gameWorld.draw();
+    Mouse.reset();//reset the mouse input for every loop iteration
 
     requestAnimationFrame(PoolGame.mainLoop); 
 }
