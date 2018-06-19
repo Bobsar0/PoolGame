@@ -2,8 +2,8 @@
 //In each Animationframe request, it will be responsible for updating them and drawing them on the canvas
 
 function GameWorld(){ 
-    this.stick = new Stick();
     this.whiteBall = new Ball(new Vector2(413, 413));
+    this.stick = new Stick(new Vector2(413, 413));
 }
 
 GameWorld.prototype.update = function(){
