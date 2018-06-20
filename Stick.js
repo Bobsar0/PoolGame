@@ -42,5 +42,5 @@ Stick.prototype.increasePower = function(){
 Stick.prototype.shoot = function(){
     this.onShoot(this.power, this.rotation);
     this.power = 0;
-    this.origin = STICK_SHOT_ORIGIN.copy();
+    this.origin = STICK_SHOT_ORIGIN.copy(); // we assign a copy so that the stick can get to the origin (collide with the ball) multiple times 
 }

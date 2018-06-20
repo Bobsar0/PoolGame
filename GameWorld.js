@@ -3,7 +3,10 @@
 
 function GameWorld(){ 
     this.whiteBall = new Ball(new Vector2(413, 413));
-    this.stick = new Stick(new Vector2(413, 413), this.whiteBall.shoot);
+    this.stick = new Stick(
+        new Vector2(413, 413), 
+        this.whiteBall.shoot.bind(this.whiteBall) //makes sure we don't lose the reference to the white ball
+    );
 }
 
 GameWorld.prototype.update = function(){
