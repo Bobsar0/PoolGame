@@ -5,8 +5,9 @@ function Ball(position){
     this.velocity = new Vector2();
 }
 
-Ball.prototype.update = function(){
-    this.position.addTo(this.velocity) //adds the position of the ball to the velocity
+Ball.prototype.update = function(delta){
+    this.position.addTo(this.velocity.mult(delta)) //adds the position of the ball to the velocity
+    this.velocity = this.velocity.mult(0.98);
 }
 
 Ball.prototype.draw = function(){
@@ -14,5 +15,5 @@ Ball.prototype.draw = function(){
 }
 
 Ball.prototype.shoot = function(power, rotation){
-    this.velocity = new Vector2(Math.cos(rotation), Math.sin(rotation));
+    this.velocity = new Vector2(power * Math.cos(rotation), power * Math.sin(rotation));
 }
