@@ -4,7 +4,7 @@
 const DELTA = 1/100; //represents how mamy times an update occurs on each iteration. 
 
 function GameWorld(){ 
-    this.whiteBall = new Ball(new Vector2(413, 413));
+    this.whiteBall = new Ball(new Vector2(413, 413), COLOR.RED);
     this.stick = new Stick(
         new Vector2(413, 413), 
         this.whiteBall.shoot.bind(this.whiteBall) //makes sure we don't lose the reference to the white ball
