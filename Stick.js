@@ -8,6 +8,7 @@ function Stick(position, onShoot){
     this.origin = STICK_ORIGIN.copy(); //Copy of stick origin
     this.power = 0;  //Initializes shot power
     this.onShoot = onShoot;
+    this.shot = false;
 }
 
 Stick.prototype.update = function(){
@@ -43,4 +44,11 @@ Stick.prototype.shoot = function(){
     this.onShoot(this.power, this.rotation);
     this.power = 0;
     this.origin = STICK_SHOT_ORIGIN.copy(); // we assign a copy so that the stick can get to the origin (collide with the ball) multiple times 
+    this.shot = true;
+}
+
+Stick.prototype.reposition = function(position){
+    this.position = position.copy();
+    this.origin = STICK_ORIGIN.copy();
+    this.shot = false;
 }
