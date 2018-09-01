@@ -28,7 +28,28 @@ function loadAssets(callback){
     }
     
     sprites.background = loadSprite('spr_background4.png'); //loads the pool table
-    sprites.stick = loadSprite('spr_stick.png') //loads the sprite
+    sprites.stick = loadSprite('spr_stick.png') //loads the stick
+    sprites.whiteBall = loadSprite('spr_whiteBall2.png') //loads the white ball
+    sprites.redBall = loadSprite('spr_redBall2.png') //loads the red ball
+    sprites.yellowBall = loadSprite('spr_yellowBall2.png') //loads the yellow ball
+    sprites.blackBall = loadSprite('spr_blackBall2.png') //loads the black ball
+
+
+
 
     assetsLoadingLoop(callback);
+}
+
+//Helper function that provides the required sprite based on the color that is passed into it
+function getBallSpriteByColor(color){
+    switch(color){
+        case COLOR.RED:
+            return sprites.redBall;
+        case COLOR.YELLOW:
+            return sprites.yellowBall;
+        case COLOR.BLACK:
+            return sprites.blackBall;
+        case COLOR.WHITE:
+            return sprites.whiteBall;
+    }
 }
